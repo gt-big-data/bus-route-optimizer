@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="java-source:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/bus_route_optimizer_jar</output-path>
+    <root id="archive" name="java-source.jar">
+      <element id="module-output" name="java-source" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/info/picocli/picocli/3.8.2/picocli-3.8.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/fulcrum/fulcrum-json-gson/1.1.0/fulcrum-json-gson-1.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.5/commons-lang-2.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/avalon/framework/avalon-framework-api/4.3.1/avalon-framework-api-4.3.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/fulcrum/fulcrum-json-api/1.1.0/fulcrum-json-api-1.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.3.1/gson-2.3.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
