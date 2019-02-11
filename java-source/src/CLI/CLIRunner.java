@@ -1,8 +1,6 @@
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+package CLI;
+
 import picocli.CommandLine;
-import picocli.CommandLine.Option;
-import picocli.CommandLine.Parameters;
 
 import java.util.concurrent.Callable;
 
