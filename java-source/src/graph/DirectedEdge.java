@@ -4,14 +4,15 @@ import java.util.Set;
 
 import static java.util.Collections.unmodifiableSet;
 
-public class UndirectedEdge<C, M> {
+public class DirectedEdge<C, M> {
 
     private Node<C, M> a;
     private Node<C, M> b;
     private Set<C> colors;
+    private double weight;
 
 
-    public UndirectedEdge(Node<C, M> a, Node<C, M> b) {
+    public DirectedEdge(Node<C, M> a, Node<C, M> b) {
         if (a == null || b == null) {
             throw new IllegalArgumentException("Nodes in edges cannot be null");
         }
@@ -47,22 +48,30 @@ public class UndirectedEdge<C, M> {
         return colors.contains(color);
     }
 
+    public double getWeight() {
+        return this.weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (obj == this) {
             return true;
         }
 
-        if (!(obj instanceof UndirectedEdge)) {
+        if (!(obj instanceof DirectedEdge)) {
             return false;
         }
 
-        UndirectedEdge otherEdge = (UndirectedEdge) obj;
-        return (a.equals(otherEdge.getA()) && b.equals(otherEdge.getB())) || (a.equals(otherEdge.getB()) && b.equals(otherEdge.getA()));
+        DirectedEdge otherEdge = (DirectedEdge) obj;
+        return (a.equals(otherEdge.getA()) && b.equals(otherEdge.getB()));
     }
 
     @Override
     public int hashCode() {
-        return (a == null ? 0 : a.hashCode()) + (b == null ? 0 : b.hashCode());
+        return (a == null ? 0 : a.hashCode()) + 2 * (b == null ? 0 : b.hashCode());
     }
 }
