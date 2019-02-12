@@ -1,0 +1,10 @@
+{
+  "A": {
+    "colors" : ["red"],
+    "isStop" : false,
+    "outgoingEdgeColors": {
+      "D": ["red"],
+      "B": []
+    }
+  }
+}
