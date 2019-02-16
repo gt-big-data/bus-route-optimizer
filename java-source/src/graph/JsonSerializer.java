@@ -22,3 +22,4 @@ public class JsonSerializer {
         System.out.println(jsonString);
     }
 }
+
