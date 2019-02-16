@@ -1,4 +1,6 @@
-package JsonStuff;
+package cs.BigDataClub;
+
+import com.google.gson.Gson;
 
 import java.io.*;
 
@@ -20,6 +22,9 @@ public class JsonSerializer {
             e.printStackTrace();
         }
         System.out.println(jsonString);
+        Gson gson = new Gson();
+        Response response = gson.fromJson(jsonString, Response.class);
+        String name = response.getDescriptor().toString();
     }
 }
 
