@@ -6,5 +6,73 @@
       "D": ["red"],
       "B": []
     }
+  },
+
+  "B": {
+    "colors" : [],
+    "isStop" : false,
+    "outgoingEdgeColors": {
+      "C": [],
+      "D": []
+    }
+  },
+
+  "C": {
+    "colors" : [],
+    "isStop" : false,
+    "outgoingEdgeColors": {
+    }
+  },
+  "D": {
+    "colors" : ["red"],
+    "isStop" : false,
+    "outgoingEdgeColors": {
+      "A": ["red"],
+      "E": ["blue"],
+      "G": ["blue","red"]
+    }
+  },
+  "E": {
+    "colors" : ["red"],
+    "isStop" : false,
+    "outgoingEdgeColors": {
+      "C": []
+    }
+  },
+  "F": {
+    "colors" : ["red"],
+    "isStop" : true,
+    "outgoingEdgeColors": {
+      "A": ["red"],
+      "I": ["red"]
+    }
+  },
+  "G": {
+    "colors" : ["red"],
+    "isStop" : false,
+    "outgoingEdgeColors": {
+      "I": ["blue","red"]
+    }
+  },
+  "H": {
+    "colors" : ["red"],
+    "isStop" : true,
+    "outgoingEdgeColors": {
+      "E": ["blue"]
+    }
+  },
+  "I": {
+    "colors" : ["red"],
+    "isStop" : false,
+    "outgoingEdgeColors": {
+      "J": ["blue"]
+    }
+  },
+  "J": {
+    "colors" : ["red"],
+    "isStop" : false,
+    "outgoingEdgeColors": {
+      "H": ["blue"]
+    }
   }
 }
