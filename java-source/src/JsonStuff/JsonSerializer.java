@@ -1,4 +1,4 @@
-package graph;
+package JsonStuff;
 
 import java.io.*;
 
