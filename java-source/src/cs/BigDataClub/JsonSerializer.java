@@ -23,8 +23,9 @@ public class JsonSerializer {
         }
         System.out.println(jsonString);
         Gson gson = new Gson();
-        Response response = gson.fromJson(jsonString, Response.class);
-        String name = response.getDescriptor().toString();
+        Responses responses = gson.fromJson(jsonString, Responses.class);
+        String name = responses.getDescriptor().toString();
+        System.out.println(name);
     }
 }
 
