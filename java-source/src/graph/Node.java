@@ -9,6 +9,7 @@ public class Node<C, M> {
     String name;
     private Set<C> colors;
     private M metaData;
+    private boolean isStop;
 
     public Node(String name, Set<C> colors, M metaData) {
         if (colors == null) {
@@ -53,5 +54,13 @@ public class Node<C, M> {
     public String toString() {
         return String.valueOf(name) + ": " + String.valueOf(colors);
 //        return String.valueOf(metaData) + ": " + String.valueOf(colors);
+    }
+
+    public boolean isStop() {
+        return isStop;
+    }
+
+    public void setStop(boolean stop) {
+        isStop = stop;
     }
 }
