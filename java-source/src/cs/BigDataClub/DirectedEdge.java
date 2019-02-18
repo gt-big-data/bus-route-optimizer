@@ -1,5 +1,7 @@
 package cs.BigDataClub;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Set;
 
 import static java.util.Collections.unmodifiableSet;
@@ -33,6 +35,9 @@ public class DirectedEdge<C, M> {
         return unmodifiableSet(colors);
     }
 
+    public void addAllColor(ArrayList<C> colorSet) {
+        colors = new HashSet<>(colorSet);
+    }
     public void addColor(C color) {
         if (color == null) {
             throw new IllegalArgumentException("Color cannot be null");
@@ -73,5 +78,10 @@ public class DirectedEdge<C, M> {
     @Override
     public int hashCode() {
         return (a == null ? 0 : a.hashCode()) + 2 * (b == null ? 0 : b.hashCode());
+    }
+
+    @Override
+    public String toString() {
+        return getA() + "   " + getB() + "   " + getWeight() + "   " + getColors();
     }
 }

@@ -6,20 +6,26 @@ import java.util.Set;
 
 public class Node<C, M> {
 
+    String name;
     private Set<C> colors;
     private M metaData;
 
-    public Node(Set<C> colors, M metaData) {
+    public Node(String name, Set<C> colors, M metaData) {
         if (colors == null) {
             throw new IllegalArgumentException("Color cannot be null");
         }
         if (metaData == null) {
             throw new IllegalArgumentException("MetaData cannot be null");
         }
+        if (name == null) {
+            throw new IllegalArgumentException("Name cannot be null");
+        }
+        this.name = name;
         this.colors = Set.copyOf(colors);
         this.metaData = metaData;
     }
 
+    public String getName() {return name;}
     public Set<C> getColors() {
         return unmodifiableSet(colors);
     }
@@ -45,6 +51,7 @@ public class Node<C, M> {
 
     @Override
     public String toString() {
-        return String.valueOf(metaData) + ": " + String.valueOf(colors);
+        return String.valueOf(name) + ": " + String.valueOf(colors);
+//        return String.valueOf(metaData) + ": " + String.valueOf(colors);
     }
 }

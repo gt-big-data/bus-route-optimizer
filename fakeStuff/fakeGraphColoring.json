@@ -24,7 +24,7 @@
     }
   },
   "D": {
-    "colors" : ["red"],
+    "colors" : ["red","blue"],
     "isStop" : false,
     "outgoingEdgeColors": {
       "A": ["red"],
@@ -33,7 +33,7 @@
     }
   },
   "E": {
-    "colors" : ["red"],
+    "colors" : ["blue"],
     "isStop" : false,
     "outgoingEdgeColors": {
       "C": []
@@ -48,28 +48,28 @@
     }
   },
   "G": {
-    "colors" : ["red"],
+    "colors" : ["red","blue"],
     "isStop" : false,
     "outgoingEdgeColors": {
       "I": ["blue","red"]
     }
   },
   "H": {
-    "colors" : ["red"],
+    "colors" : ["blue"],
     "isStop" : true,
     "outgoingEdgeColors": {
       "E": ["blue"]
     }
   },
   "I": {
-    "colors" : ["red"],
+    "colors" : ["red","blue"],
     "isStop" : false,
     "outgoingEdgeColors": {
       "J": ["blue"]
     }
   },
   "J": {
-    "colors" : ["red"],
+    "colors" : ["blue"],
     "isStop" : false,
     "outgoingEdgeColors": {
       "H": ["blue"]
