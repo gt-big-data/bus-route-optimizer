@@ -84,6 +84,7 @@ public class JsonParsingGraphColoring {
 
         DirectedGraph<String, String> directedGraph = new DirectedGraph<String, String>(adjacencyList);
 
+
         System.out.println(directedGraph);
 
     }
