@@ -1,4 +1,4 @@
-package cs.BigDataClub;
+package graph;
 
 import java.util.ArrayList;
 import java.util.HashSet;

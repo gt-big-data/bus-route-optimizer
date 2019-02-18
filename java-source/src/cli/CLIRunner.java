@@ -1,4 +1,4 @@
-package cs.BigDataClub;
+package cli;
 
 import java.util.concurrent.Callable;
 
