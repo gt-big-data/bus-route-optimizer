@@ -24,7 +24,9 @@ public class CLIRunner implements Callable<Void> {
 
     @Override
     public Void call() throws Exception {
-        System.out.println("TEST");
+        // Testing JSONGraphConverter
+        var myGraph = JSONGraphConverter.generateGraphFromJSON(inputAdjacencyListFile, inputColoringFile);
+        JSONGraphConverter.generateJSONsFromGraph(myGraph, outputAdjacencyListFile, outputColoringFile);
         return null;
     }
 }
