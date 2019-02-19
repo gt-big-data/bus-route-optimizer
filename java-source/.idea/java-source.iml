@@ -8,7 +8,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="info.picocli:picocli:3.8.2" level="project" />
     <orderEntry type="library" name="org.apache.fulcrum:fulcrum-json-gson:1.1.0" level="project" />
+    <orderEntry type="library" name="info.picocli:picocli:3.8.2" level="project" />
+    <orderEntry type="library" name="com.google.code.gson:gson:1.1" level="project" />
   </component>
 </module>
