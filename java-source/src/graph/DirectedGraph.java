@@ -9,16 +9,17 @@ public class DirectedGraph<C, M> {
     private Map<Node<C, M>, List<Node<C, M>>> adjacencyList;
     private Set<DirectedEdge<C, M>> edgeSet;
 
-    public DirectedGraph(Map<Node<C, M>, List<Node<C, M>>> adjacencyList) {
+    public DirectedGraph(Map<Node<C, M>, List<Node<C, M>>> adjacencyList, Set<DirectedEdge<C, M>> edgeSet) {
         Map<Node<C, M>, List<Node<C, M>>> unmodifiableAdjacencyList = new HashMap<>();
         adjacencyList.forEach((key, value) -> unmodifiableAdjacencyList.put(key, unmodifiableList(value)));
         this.adjacencyList = Collections.unmodifiableMap(unmodifiableAdjacencyList);
-        this.edgeSet = new HashSet<>();
-        for (Map.Entry<Node<C, M>, List<Node<C, M>>> entry : this.adjacencyList.entrySet()) {
-            for (Node<C, M> adjacentNode : entry.getValue()) {
-                this.edgeSet.add(new DirectedEdge<>(entry.getKey(), adjacentNode));
-            }
-        }
+//        this.edgeSet = new HashSet<>();
+//        for (Map.Entry<Node<C, M>, List<Node<C, M>>> entry : this.adjacencyList.entrySet()) {
+//            for (Node<C, M> adjacentNode : entry.getValue()) {
+//                this.edgeSet.add(new DirectedEdge<>(entry.getKey(), adjacentNode,edgeSet));
+//            }
+//        }
+        this.edgeSet = edgeSet;
     }
 
     public Set<DirectedEdge<C, M>> getEdgeSet() {

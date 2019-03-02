@@ -11,7 +11,7 @@ public class Node<C, M> {
     private M metaData;
     private boolean isStop;
 
-    public Node(String name, Set<C> colors, M metaData) {
+    public Node(String name, Set<C> colors, M metaData, boolean isStop) {
         if (colors == null) {
             throw new IllegalArgumentException("Color cannot be null");
         }
@@ -24,6 +24,7 @@ public class Node<C, M> {
         this.name = name;
         this.colors = Set.copyOf(colors);
         this.metaData = metaData;
+        this.isStop = isStop;
     }
 
     public String getName() {return name;}
@@ -52,7 +53,7 @@ public class Node<C, M> {
 
     @Override
     public String toString() {
-        return String.valueOf(name) + ": " + String.valueOf(colors);
+        return String.valueOf(name) + ": " + String.valueOf(colors) + " " + isStop;
 //        return String.valueOf(metaData) + ": " + String.valueOf(colors);
     }
 

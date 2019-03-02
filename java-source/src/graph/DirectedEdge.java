@@ -14,12 +14,13 @@ public class DirectedEdge<C, M> {
     private double weight;
 
 
-    public DirectedEdge(Node<C, M> a, Node<C, M> b) {
-        if (a == null || b == null) {
+    public DirectedEdge(Node<C, M> a, Node<C, M> b,Set<C> colors) {
+        if (a == null || b == null || colors == null) {
             throw new IllegalArgumentException("Nodes in edges cannot be null");
         }
         this.a = a;
         this.b = b;
+        this.colors = colors;
     }
 
     public Node<C, M> getA() {
